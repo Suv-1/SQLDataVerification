@@ -15,7 +15,8 @@ Python
 # Modules Used
 
 from flask import Flask, render_template, request
-pandas
+openpyxl
+datetime
 mysql.connector
 os
 win32com.client
