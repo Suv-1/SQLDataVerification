@@ -1,1 +1,104 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Load Validation</title>
+        <style>
+            header
+        {
+        
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+        }
+        @keyframes typing
+        {
+            from {width: 0}
+            to {width: 100%}
+        }
+        h1
+        {
+            overflow: hidden;
+            border-right: 0.15em solid #fff;
+            white-space: nowrap;margin: 0;
+            letter-spacing: 0.15em;
+            animation: typing 2s steps(20,end) infinite;
+            color: black;
+        }
+        body
+            {
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                background-color: #FF7F00;
+                margin: auto;
+                padding: 50px;
+            }
+        form
+            {
+                background-color: #bd650cda;
+                max-width: 500px;
+                padding: 80px;
+                margin: auto;
+            }
+        label
+        {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[id="user"], input[id='password'], input[id='host'], input[id='database'],input[id='file'],input[id='email']
+        {
+                background-color: #f4cdcd;
+                margin-bottom: 10px;
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                border: none;
+                cursor: pointer;
+        }
+        input[type='submit']
+            {
+                background-color: green;
+                color: white;
+                padding: 10px;
+                border: #f2f2f2;
+                cursor: pointer;
+            }
+        input[type='reset']
+            {
+                background-color: red;
+                color: white;
+                padding: 10px;
+                border: #f2f2f2;
+                cursor: pointer;
+            }
+        input[type="submit"]:hover
+            {
+                color: rgb(18, 66, 18)
+            }
+        input[type="reset"]:hover
+            {
+                color: rgb(118, 16, 16);
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Table Load Validation</h1>
+        </header>
+        <form action="/submit" method="POST">
+            <label for="user">User ID:</label>
+            <input type="text" name="user" id="user" autocomplete="off" required>
+            <label for="password">Password:</label>
+            <input type="password" id = password name="password" autocomplete="off">
+            <label for="host">Host:</label>
+            <input type="text" id = "host" name = "host" autocomplete="off" required>
+            <label for="database">Database:</label>
+            <input type="text" id ="database" name = "database" autocomplete="off" required>
+            <label for="file">File Path:</label>
+            <input type="text" name="file" id="file" autocomplete="off" required>
+            <label for="email">Email:</label>
+            <input type="text" name="email" id = "email" autocomplete="off">
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>
