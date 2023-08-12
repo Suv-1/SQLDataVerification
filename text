@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Chatbot</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #navbar {
+            background-color: rgb(18, 18, 62);
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        #navbar ul li {
+            margin-right: 20px;
+        }
+
+        #chat-container {
+            position: absolute;
+            top: 70px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgb(0, 0, 33);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        #chat-box {
+            width: 100%;
+            height: calc(100% - 120px); /* Adjust for input height */
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        #input-container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        #user-input {
+            flex: 1;
+            margin-right: 10px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #send-btn {
+            background-color: rgb(18, 18, 62);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        /* ... (rest of the CSS styles) ... */
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="#">Option 1</a></li>
+            <li><a href="#">Option 2</a></li>
+            <li><a href="#">Option 3</a></li>
+            <li><a href="#">Option 4</a></li>
+            <li><a href="#">Option 5</a></li>
+        </ul>
+    </div>
+    <div id="chat-container">
+        <div id="chat-box">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div id="input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <input type="file" id="image-input">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
